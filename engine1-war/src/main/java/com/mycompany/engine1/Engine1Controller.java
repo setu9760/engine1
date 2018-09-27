@@ -14,7 +14,7 @@ import com.mycompany.app.common.model.ModelB;
 import com.mycompany.app.common.service.ModelService;
 
 @RestController
-@RequestMapping(path = "/api", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+@RequestMapping(path = "/engine1/api", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
 public class Engine1Controller {
 
 	@Autowired

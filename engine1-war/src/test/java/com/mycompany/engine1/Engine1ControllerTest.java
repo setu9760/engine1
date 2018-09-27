@@ -31,7 +31,7 @@ public class Engine1ControllerTest {
     
     @Test
     public void testHello() throws Exception {
-    	mvc.perform(get("/api/hello/abcd"))
+    	mvc.perform(get("/engine1/api/hello/abcd"))
     		.andExpect(status().isOk())
     		.andExpect(content().contentType(MediaType.APPLICATION_JSON_UTF8))
     		.andExpect(jsonPath("$.msg", is("hello abcd")))
@@ -41,7 +41,7 @@ public class Engine1ControllerTest {
     @Test
     public void testGetModelA() throws Exception {
     	when(modelService.getModelA("abcd")).thenReturn(new ModelA("abcd", 1));
-    	mvc.perform(get("/api/modela/abcd"))
+    	mvc.perform(get("/engine1/api/modela/abcd"))
 	    	.andExpect(status().isOk())
 			.andExpect(content().contentType(MediaType.APPLICATION_JSON_UTF8))
 			.andExpect(jsonPath("$.name", is("abcd")))
@@ -52,7 +52,7 @@ public class Engine1ControllerTest {
     @Test
     public void testGetModelB() throws Exception {
     	when(modelService.getModelB("abcd")).thenReturn(new ModelB("abcd", 1));
-    	mvc.perform(get("/api/modelb/abcd"))
+    	mvc.perform(get("/engine1/api/modelb/abcd"))
 	    	.andExpect(status().isOk())
 			.andExpect(content().contentType(MediaType.APPLICATION_JSON_UTF8))
 			.andExpect(jsonPath("$.name", is("abcd")))
