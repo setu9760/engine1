@@ -4,6 +4,10 @@ public class Util {
 
 	private static final String STRING = "";
 	
+	private Util() {
+		
+	}
+	
 	public static final String getString() {
 		return STRING;
 	}

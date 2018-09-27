@@ -22,16 +22,16 @@ public class Engine1Controller {
 	
 	@GetMapping("/modela/{name}")
 	public ResponseEntity<ModelA> getModelA(@PathVariable String name) throws Exception {
-		return new ResponseEntity<ModelA>(modelService.getModelA(name), HttpStatus.OK);
+		return new ResponseEntity<>(modelService.getModelA(name), HttpStatus.OK);
 	}
 
 	@GetMapping("/modelb/{name}")
 	public ResponseEntity<ModelB> getModelB(@PathVariable String name) throws Exception {
-		return new ResponseEntity<ModelB>(modelService.getModelB(name), HttpStatus.OK);
+		return new ResponseEntity<>(modelService.getModelB(name), HttpStatus.OK);
 	}
 	
 	@GetMapping("/hello/{name}")
-	public ResponseEntity<String> hello(@PathVariable String name) throws Exception {
-		return new ResponseEntity<String>(String.format("{\"msg\" : \"hello %s\"}", name), HttpStatus.OK) ;
+	public ResponseEntity<String> hello(@PathVariable String name) {
+		return new ResponseEntity<>(String.format("{\"msg\" : \"hello %s\"}", name), HttpStatus.OK) ;
 	}
 }
