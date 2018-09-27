@@ -31,7 +31,7 @@ public class Engine1Controller {
 	}
 	
 	@GetMapping("/hello/{name}")
-	public ResponseEntity<String> hello(@PathVariable(required=false) String name) throws Exception {
-		return new ResponseEntity<String>(String.format("hello %s", name != null ? name : "worlds!!!"), HttpStatus.OK) ;
+	public ResponseEntity<String> hello(@PathVariable String name) throws Exception {
+		return new ResponseEntity<String>(String.format("{\"msg\" : \"hello %s\"}", name), HttpStatus.OK) ;
 	}
 }
