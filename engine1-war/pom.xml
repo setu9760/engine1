@@ -13,6 +13,7 @@
 
 	<artifactId>engine1-war</artifactId>
 	<name>engine1-war</name>
+	<packaging>war</packaging>
 	<url>http://maven.apache.org</url>
 
 	<properties>
@@ -72,7 +73,7 @@
 	<build>
 		<finalName>engine1</finalName>
 		<plugins>
-			<plugin>
+			<!-- plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 				<version>${springframework.boot.version}</version>
@@ -83,7 +84,7 @@
 						</goals>
 					</execution>
 				</executions>
-			</plugin>
+			</plugin-->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-resources-plugin</artifactId>
